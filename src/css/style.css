@@ -1,0 +1,90 @@
+@font-face {
+    font-family: parkinsans-medium;
+    src: url(../assets/fonts/Parkinsans-Medium.ttf);
+}
+@font-face {
+    font-family: parkinsans-regular;
+    src: url(../assets/fonts/Parkinsans-Regular.ttf);
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-background-color);
+}
+.quiz-container {
+    background-color: var(--quiz-background-color);
+    width: 90%;
+    max-width: 700px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quiz-heading {
+    font-weight: 700;
+    color: var(--primary-background-color);
+    border-bottom: 1px solid #00426b;
+    padding-bottom: 30px;
+    font-family: parkinsans-medium;
+    align-items: center;
+    justify-content: center;
+}
+.quiz {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quiz-question {
+    font-size: 1.125rem;
+    font-family: parkinsans-regular;
+    color: var(--primary-font-color);
+    padding-top: 1.5rem;
+}
+.quiz-answers {
+    display: flex;
+    gap: 2rem;
+    padding-top: 0.5rem;
+}
+.btn {
+    background-color: var(--quiz-background-color);
+    color: var(--primary-font-color);
+    font-family: parkinsans-regular;
+    width: fit-content;
+    border: 2px solid #00426b;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+.btn:hover:not(:disabled) {
+    background-color: var(--primary-background-color);
+    color: var(--quiz-background-color);
+}
+.btn:disabled {
+    cursor: no-drop;
+}
+.next-question-btn {
+    background-color: var(--primary-background-color);
+    color: var(--quiz-background-color);
+    font-family: parkinsans-regular;
+    font-size: 1.125rem;
+    padding: 10px;
+    border: none;
+    width: 50%;
+    margin: 20px auto 0;
+    cursor: pointer;
+    display: none;
+    border-radius: 10px;
+}
+.correct {
+    background-color: var(--right-answer-color);
+}
+.incorrect {
+    background-color: var(--wrong-answer-color);
+}

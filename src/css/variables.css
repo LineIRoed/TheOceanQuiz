@@ -1,0 +1,10 @@
+:root {
+    --primary-font-color: #31081F;
+    --secondary-font-color: #fbba91;
+
+    --primary-background-color: #00426b;
+    --quiz-background-color: #fbba91;
+
+    --right-answer-color: #44AF69;
+    --wrong-answer-color: #AF5B5B;
+}
