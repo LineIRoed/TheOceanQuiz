@@ -156,3 +156,6 @@ nextButton.addEventListener("click", ()=>{
 });
 
 startQuiz();
+
+
+console.log(currentQuestionIndex);
