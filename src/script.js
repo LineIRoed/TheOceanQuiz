@@ -76,6 +76,8 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const progressText = document.getElementById("progress-text");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -104,6 +106,8 @@ function showQuestion(){
         }
         button.addEventListener("click", selectAnswer);
     });
+
+    updateProgressBar();
 }
 
 function resetState(){
@@ -131,6 +135,14 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
+function updateProgressBar() {
+    const totalQuestions = questions.length;
+    const currentQuestion = currentQuestionIndex + 1;
+
+    progressText.innerHTML = `Question ${currentQuestion} of ${totalQuestions}`;
+}
+
+
 function showScore(){
     resetState();
     questionElement.innerHTML = `You Scored ${score} out of ${questions.length}!`;
@@ -156,6 +168,3 @@ nextButton.addEventListener("click", ()=>{
 });
 
 startQuiz();
-
-
-console.log(currentQuestionIndex);

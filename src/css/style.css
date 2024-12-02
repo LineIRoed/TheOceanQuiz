@@ -42,6 +42,7 @@ body {
     font-family: parkinsans-regular;
     color: var(--primary-font-color);
     padding-top: 1.5rem;
+    text-align: center;
 }
 .quiz-answers {
     display: flex;
@@ -87,4 +88,16 @@ body {
 }
 .incorrect {
     background-color: var(--wrong-answer-color);
+}
+
+#progress-container {
+    padding-top: 1.5rem;
+}
+
+/* Styling the progress text */
+#progress-text {
+    color: var(--primary-font-color);
+    font-family: parkinsans-regular;
+    font-size: 0.875rem;
+    padding-top: 2rem;
 }
