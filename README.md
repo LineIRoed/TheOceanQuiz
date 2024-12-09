@@ -51,6 +51,6 @@ If you have any questions or suggestions, feel free to reach out to me at [anro0
 
 Link to github repository: https://github.com/LineIRoed/TheOceanQuiz.git
 
-link to netlify deployment: 
+link to netlify deployment: https://67571080dd804f00b44ceade--thriving-queijadas-708cff.netlify.app/
 
 tutorial i have followed for js: https://www.youtube.com/watch?v=PBcqGxrr9g8
