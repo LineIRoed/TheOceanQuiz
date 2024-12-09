@@ -74,9 +74,9 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
-const progressText = document.getElementById("progress-text");
+const answerButtons = document.getElementById("answer__buttons");
+const nextButton = document.getElementById("next__btn");
+const progressText = document.getElementById("progress__text");
 
 
 let currentQuestionIndex = 0;

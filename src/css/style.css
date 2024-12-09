@@ -11,7 +11,7 @@ body {
     height: 100vh;
     background-color: var(--primary-background-color);
 }
-.quiz-container {
+.quiz__container {
     background-color: var(--quiz-background-color);
     width: 90%;
     max-width: 700px;
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.quiz-heading {
+.quiz__heading {
     font-weight: 700;
     color: var(--primary-background-color);
     border-bottom: 1px solid #00426b;
@@ -37,17 +37,18 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.quiz-question {
+.quiz__question {
     font-size: 1.125rem;
     font-family: parkinsans-regular;
     color: var(--primary-font-color);
     padding-top: 1.5rem;
     text-align: center;
 }
-.quiz-answers {
+.quiz__answers {
     display: flex;
     gap: 2rem;
     padding-top: 0.5rem;
+    font-size: 1rem;
 }
 .btn {
     background-color: var(--quiz-background-color);
@@ -70,7 +71,7 @@ body {
 .btn:disabled {
     cursor: no-drop;
 }
-.next-question-btn {
+.next-question__btn {
     background-color: var(--primary-background-color);
     color: var(--quiz-background-color);
     font-family: parkinsans-regular;
@@ -90,14 +91,25 @@ body {
     background-color: var(--wrong-answer-color);
 }
 
-#progress-container {
+#progress__container {
     padding-top: 1.5rem;
 }
 
 /* Styling the progress text */
-#progress-text {
+#progress__text {
     color: var(--primary-font-color);
     font-family: parkinsans-regular;
     font-size: 0.875rem;
     padding-top: 2rem;
+}
+
+@media screen and (max-width: 656px) {
+    .quiz__answers {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .btn {
+        width: 100%;
+    }
 }
