@@ -1,3 +1,4 @@
+/* fonts */
 @font-face {
     font-family: parkinsans-medium;
     src: url(../assets/fonts/Parkinsans-Medium.ttf);
@@ -6,11 +7,13 @@
     font-family: parkinsans-regular;
     src: url(../assets/fonts/Parkinsans-Regular.ttf);
 }
+/* body styling */
 body {
     width: 100%;
     height: 100vh;
     background-color: var(--primary-background-color);
 }
+/* container for quiz */
 .quiz__container {
     background-color: var(--quiz-background-color);
     width: 90%;
@@ -22,6 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/* heading styling */
 .quiz__heading {
     font-weight: 700;
     color: var(--primary-background-color);
@@ -37,6 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/* question styling */
 .quiz__question {
     font-size: 1.125rem;
     font-family: parkinsans-regular;
@@ -44,12 +49,14 @@ body {
     padding-top: 1.5rem;
     text-align: center;
 }
+/* answers styling */
 .quiz__answers {
     display: flex;
     gap: 2rem;
     padding-top: 0.5rem;
     font-size: 1rem;
 }
+/* button styling */
 .btn {
     background-color: var(--quiz-background-color);
     color: var(--primary-font-color);
@@ -64,13 +71,16 @@ body {
     font-size: 1rem;
     transition: all 0.3s;
 }
+/* hover styling */
 .btn:hover:not(:disabled) {
     background-color: var(--primary-background-color);
     color: var(--quiz-background-color);
 }
+/* disabled styling */
 .btn:disabled {
     cursor: no-drop;
 }
+/* next question button styling */
 .next-question__btn {
     background-color: var(--primary-background-color);
     color: var(--quiz-background-color);
@@ -84,13 +94,14 @@ body {
     display: none;
     border-radius: 10px;
 }
+/* styling for correct/incorrect */
 .correct {
     background-color: var(--right-answer-color);
 }
 .incorrect {
     background-color: var(--wrong-answer-color);
 }
-
+/* progress bar container */
 #progress__container {
     padding-top: 1.5rem;
 }
@@ -103,6 +114,7 @@ body {
     padding-top: 2rem;
 }
 
+/* media queries */
 @media screen and (max-width: 656px) {
     .quiz__answers {
         display: flex;

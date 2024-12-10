@@ -1,3 +1,4 @@
+// questions array
 const questions = [
     {
         question: "What is the largest fish in the ocean?",
@@ -73,15 +74,17 @@ const questions = [
     }
 ];
 
+// getting elements from html file
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer__buttons");
 const nextButton = document.getElementById("next__btn");
 const progressText = document.getElementById("progress__text");
 
-
+// tracks progress in quiz
 let currentQuestionIndex = 0;
 let score = 0;
 
+// start quiz function, show first question and set button to next
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
@@ -89,6 +92,7 @@ function startQuiz(){
     showQuestion();
 }
 
+// display current question and answers funtion
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -96,6 +100,7 @@ function showQuestion(){
     questionElement.innerHTML = questionNo + ". " + currentQuestion.
     question;
 
+    // create buttons for answers
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
@@ -110,6 +115,7 @@ function showQuestion(){
     updateProgressBar();
 }
 
+// reset before showing next question
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
@@ -117,6 +123,7 @@ function resetState(){
     }
 }
 
+// when answer is selected set of an action
 function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -135,6 +142,7 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
+// update progressbar for quiz
 function updateProgressBar() {
     const totalQuestions = questions.length;
     const currentQuestion = currentQuestionIndex + 1;
@@ -142,7 +150,7 @@ function updateProgressBar() {
     progressText.innerHTML = `Question ${currentQuestion} of ${totalQuestions}`;
 }
 
-
+// show score at end and show play again button
 function showScore(){
     resetState();
     questionElement.innerHTML = `You Scored ${score} out of ${questions.length}!`;
@@ -150,6 +158,7 @@ function showScore(){
     nextButton.style.display = "block";
 }
 
+// function for next button
 function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
@@ -159,6 +168,7 @@ function handleNextButton(){
     }
 };
 
+// event listener for next button
 nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
         handleNextButton();
@@ -167,4 +177,5 @@ nextButton.addEventListener("click", ()=>{
     }
 });
 
+// start quiz when page loads
 startQuiz();
